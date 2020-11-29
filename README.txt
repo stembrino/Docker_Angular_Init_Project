@@ -1,0 +1,16 @@
+ # the docker file is set to build the project in this directory. The name of the project is set in the env in the DOcker file. See the first example here.
+ # To change it, modify the command in the Docker file, but you gave to adapt the docker-compose file:
+
+# INIT PROJECT
+#Example 1: to create a image from init.dockerfile
+docker build -t angular-image -f init.dockerfile .
+
+# Example to run the container to create a Angular project. the flag -e will set the name of project
+docker run --rm -e "PROJECT_NAME=angular-baby" -v "<absolute path to project>:/frontend" -it angular-image
+
+###################################################
+# RUN PROJECT
+# To run the project use the docker-compose file:
+docker-compose up
+
+# To use the ng command use the Dockerfile or change comment the entrypoint from docker-compose
