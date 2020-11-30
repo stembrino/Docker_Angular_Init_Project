@@ -1,3 +1,5 @@
+ ###################################################
+ # INIT PROJECT
  # the docker file is set to build the project in this directory. The name of the project is set in the env in the DOcker file. See the first example here.
  # To change it, modify the command in the Docker file, but you gave to adapt the docker-compose file:
 
