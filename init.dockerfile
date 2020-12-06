@@ -8,4 +8,4 @@ WORKDIR /frontend
 
 VOLUME [ "/frontend/node_modules" ]
 
-ENTRYPOINT ng new ${PROJECT_NAME} --directory ./
+ENTRYPOINT ng new ${PROJECT_NAME} --skipInstall=true --directory ./
