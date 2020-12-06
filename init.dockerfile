@@ -9,3 +9,5 @@ WORKDIR /frontend
 VOLUME [ "/frontend/node_modules" ]
 
 ENTRYPOINT ng new ${PROJECT_NAME} --skipInstall=true --directory ./
+
+# See the https://angular.io/cli/new to view all options to init a project

@@ -1,3 +1,5 @@
+ ###################################################
+ # INIT PROJECT
  # the docker file is set to build the project in this directory. The name of the project is set in the env in the DOcker file. See the first example here.
  # To change it, modify the command in the Docker file, but you gave to adapt the docker-compose file:
 
@@ -13,4 +15,8 @@ docker run --rm -e "PROJECT_NAME=angular-baby" -v "<absolute path to project>:/f
 # To run the project use the docker-compose file:
 docker-compose up
 
-# To use the ng command use the Dockerfile or change comment the entrypoint from docker-compose
+# To use the ng command use the Dockerfile or change/comment the entrypoint from docker-compose and use the command through the docker-compose (example)
+# comment the ENTRYPOINT in the docker-compose and use the command
+docker-compose run ng generate <compont name>
+# Or use the Dockerfile but you have to use the -v tag to mapping the container with you local machine
+docker run --rm -v "<absolute path project>:/frontend" <container name>
