@@ -20,3 +20,7 @@ docker-compose up
 docker-compose run ng generate <compont name>
 # Or use the Dockerfile but you have to use the -v tag to mapping the container with you local machine
 docker run --rm -v "<absolute path project>:/frontend" <container name>
+
+###################################################
+# Remember when you install a package you have to rebuild the image:
+docker-compose up --build
