@@ -20,7 +20,7 @@ To change it, modify the command in the Docker file, but you gave to adapt the d
 4. Next, mount the container, access the http://localhost:4220
 5. Now, you can delete the project Docker_Angular_Init_Project
 
-> if you you'd like to not get the node_modules set this: `SKIP_INSTALL` value to true. Remember that you need to node modules to auto complete VScode (text editor).
+> if you you'd like to not get the node_modules set this: `SKIP_INSTALL` value to true. Remember that you need to node modules to auto complete VScode (text editorcd ..).
 
 To use the ng command, use the Dockerfile or change/comment the entrypoint from docker-compose and use the command through the docker-compose (example)
 comment the ENTRYPOINT in the docker-compose and use the command
