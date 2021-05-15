@@ -7,7 +7,7 @@ services:
     entrypoint: "ng serve --host 0.0.0.0"
     volumes: 
       - ./:/frontend/
-     # - /frontend/node_modules
+     # - /frontend/node_modules # if you choose avoid node_modules, use this volume as well
     ports:  
       - "4200:4200"
     stdin_open: true
