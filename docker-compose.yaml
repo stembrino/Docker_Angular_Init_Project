@@ -2,11 +2,11 @@ version: "3.8"
 services:
   ng:
     build: .
-    entrypoint: "ng serve --host 0.0.0.0"
+    ports:
+      - "4200:4200"
+    entrypoint: "ng serve --host 0.0.0.0 --poll" # --poll flag is set to support angular live reload in Windows docker 
     volumes: 
       - ./:/frontend/
       - /frontend/node_modules # to avoid copy node_mudules again.
-    ports:  
-      - "4200:4200"
     stdin_open: true
     tty: true
