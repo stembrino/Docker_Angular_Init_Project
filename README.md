@@ -1,11 +1,11 @@
  ## INIT PROJECT
- The docker file is set to build the project in this directory. 
+The docker file is set to build the project in this directory. 
 The name of the project is set in the env in the DOcker file. See the first example here.
- To change it, modify the command in the Docker file, but you gave to adapt the docker-compose file:
+To change it, modify the command in the Docker file, but you gave to adapt the docker-compose file:
 
 ### Example to create a image from init.dockerfile:
 
-`docker build -t angular-image -f init.dockerfile`
+`docker build -t angular-image -f init.dockerfile .`
 
 ### Example to run the container to create an Angular project. 
 > flag -e will set the name of project
@@ -13,8 +13,12 @@ The name of the project is set in the env in the DOcker file. See the first exam
 `docker run --rm -e "PROJECT_NAME=angular-baby" -v "<absolute path to project>:/frontend" -it angular-image`
 
 ## RUN PROJECT
-Use the docker-compose file:
-`docker-compose up`
+1. First, copy or move the **dockercompose.yaml** and **Dockerfile** to the project directory. 
+2. In terminal, go to project path.
+3. Use the docker-compose file to run the project:
+   `docker-compose up`
+4. Next, mount the container, access the http://localhost:4220
+5. Now, you can delete the project Docker_Angular_Init_Project
 
 To use the ng command, use the Dockerfile or change/comment the entrypoint from docker-compose and use the command through the docker-compose (example)
 comment the ENTRYPOINT in the docker-compose and use the command
