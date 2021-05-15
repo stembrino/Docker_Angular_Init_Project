@@ -2,12 +2,10 @@ version: "3.8"
 services:
   ng:
     build: .
-    ports:
-      - "4200"
     entrypoint: "ng serve --host 0.0.0.0"
     volumes: 
       - ./:/frontend/
-     # - /frontend/node_modules # if you choose avoid node_modules, use this volume as well
+      - /frontend/node_modules # to avoid copy node_mudules again.
     ports:  
       - "4200:4200"
     stdin_open: true
