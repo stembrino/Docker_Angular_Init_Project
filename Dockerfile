@@ -4,7 +4,7 @@ RUN npm install -g @angular/cli
 
 WORKDIR /frontend
 
-COPY ../package.json .
+COPY ./package.json .
 
 RUN npm install
 
