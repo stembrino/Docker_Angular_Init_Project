@@ -2,7 +2,7 @@ FROM node:14
 
 ENV PROJECT_NAME=hello_angular
 ENV SKIP_INSTALL=false
-RUN npm install -g @angular/cli 
+RUN npm install -g @angular/cli@12.0.0
 
 WORKDIR /frontend
 
