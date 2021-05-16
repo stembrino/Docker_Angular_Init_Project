@@ -34,11 +34,11 @@ Other ways, but not recommended:
 To use the ng command, use the Dockerfile or change/comment the entrypoint from docker-compose and use the command through the docker-compose (example)
 comment the ENTRYPOINT in the docker-compose and use the command
 
-`docker-compose run ng generate **<compont name>**`
+`docker-compose run ng generate <compont name>`
 
 Or use the Dockerfile but you have to use the -v tag to mapping the container with you local machine
 
-`docker run --rm -v "**<absolute path project>**:/frontend" **<container name>**`
+`docker run --rm -v "<absolute path project>:/frontend" <container name>`
 
 ### Remember when you install a dependencie, you have to rebuild the image:
 
