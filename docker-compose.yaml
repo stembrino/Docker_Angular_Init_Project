@@ -2,11 +2,13 @@ version: "3.8"
 services:
   ng:
     build: .
+    container_name: angular_project # you can named this as you'd like
     ports:
       - "4200:4200"
-    entrypoint: "ng serve --host 0.0.0.0 --poll" # --poll flag is set to support angular live reload in Windows docker 
     volumes: 
       - ./:/frontend/
       - /frontend/node_modules # to avoid copy node_mudules again.
     stdin_open: true
     tty: true
+    entrypoint: "ng serve --host 0.0.0.0 --poll" # --poll flag is set to support angular live reload in Windows docker 
+    # entrypoint: "ng generate component <component name>"
