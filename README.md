@@ -6,12 +6,12 @@ To change it, modify the command in the Docker file, but you gave to adapt the d
 
 ### Example to create a image from init.dockerfile:
 
-`docker build -t angular-image -f init.dockerfile .`
+`docker build -t angular-init-project-temp -f init.dockerfile .`
 
 ### Example to run the container to create an Angular project. 
 > flag -e will set the name of project
 
-`docker run --rm -e "PROJECT_NAME=angular-baby" -v "<absolute path to project>:/frontend" -it angular-image`
+`docker run --rm -e "PROJECT_NAME=angular-baby" -v "<absolute path to project>:/frontend" -it angular-init-project-temp`
 
 ## RUN PROJECT
 1. First, copy or move the **dockercompose.yaml** and **Dockerfile** to the project directory. 
