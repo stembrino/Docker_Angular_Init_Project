@@ -4,6 +4,7 @@ services:
     build: .
     container_name: angular_project # you can named this as you'd like
     entrypoint: "ng serve --host 0.0.0.0 --poll" # --poll flag is set to support angular live reload in Windows docker 
+    # entrypoint: "ng" # Discomment this line and comment the entrypoint above to run ng comman: Examle: docker compose run ng generate component <name>
     ports:
       - "4200:4200"
     volumes: 
